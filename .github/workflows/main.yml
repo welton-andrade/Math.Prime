@@ -1,0 +1,27 @@
+name: Prime Number Workflow
+
+on: 
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-22.04
+    
+    steps:
+    - uses: actions/checkout@main
+
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@v2
+      with: 
+        dotnet-version: '6.0.x'
+
+    - name: Build with dotnet
+      run: dotnet build --configuration Release
+
+    - name: Test
+      run: dotnet test
+
+    - name: Create the Package
+      run: dotnet pack --configuration Release
