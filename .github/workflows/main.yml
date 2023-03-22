@@ -25,3 +25,6 @@ jobs:
 
     - name: Create the Package
       run: dotnet pack --configuration Release
+
+    - name: Add GitHub Packages Source
+      run: dotnet nuget add source https://nuget.pkg.github.com/welton-andrade/index.json --name github -u welton-andrade -p ${{ secrets.GITHUB_TOKEN }} --store-password-in-clear-text
