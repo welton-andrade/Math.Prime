@@ -27,4 +27,4 @@ jobs:
       run: dotnet pack -c Release
 
     - name: Add GitHub Packages Source
-      run: dotnet nuget push "PrimeNumber/bin/Release/*.nupkg" -k ${{ secrets.NUGET_TOKEN }} -s https://nuget.pkg.github.com/welton-andrade/index.json
+      run: dotnet nuget push "PrimeNumber/bin/Release/*.nupkg" -k ${{ secrets.NUGET_TOKEN }} -s "github"
