@@ -4,6 +4,13 @@
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+
+    <PackageId>PrimeNumber</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>Welton</Authors>
+    <Company>undefined</Company>
+    <PackageDescription>Prime number library</PackageDescription>
+    <RepositoryUrl>https://github.com/welton-andrade/Math.Prime</RepositoryUrl>
   </PropertyGroup>
 
 </Project>
