@@ -33,4 +33,7 @@ jobs:
       # run: dotnet nuget push "PrimeNumber/bin/Release/*.nupkg" -k ${{ secrets.NUGET_TOKEN }} --source "github"
       # run: dotnet nuget push "PrimeNumber/bin/Release/*.nupkg" -k ${{ secrets.GITHUB_TOKEN }} -s "https://nuget.pkg.github.com/welton-andrade/index.json"
       # run: dotnet nuget push "PrimeNumber/bin/Release/*.nupkg" --source "github" --api-key API_KEY
-      run: dotnet nuget push "PrimeNumber/bin/Release/*.nupkg" -s github -k NUGET_TOKEN
+      # run: dotnet nuget push "PrimeNumber/bin/Release/*.nupkg" -s github -k NUGET_TOKEN
+      run: dotnet nuget push bin/Release/*.nupkg --s "github"
+      env:
+          NUGET_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
