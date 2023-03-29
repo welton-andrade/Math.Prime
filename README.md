@@ -1,6 +1,7 @@
 # Prime number extension
 
 ## Test
+
 To test this extension it needs to execute the following code on terminal:
 
 ```bash
@@ -8,19 +9,22 @@ dotnet test
 ```
 
 ## How to use
+
 First, you should add this nuget package registry in your nuget package source reference:
 
 ```bash
-dotnet nuget add source https://nuget.pkg.github.com/welton-andrade/index.json --name github -u user_name -p ${{ secrets.GITHUB_TOKEN }} --store-password-in-clear-text
+dotnet nuget add source https://nuget.pkg.github.com/welton-andrade/index.json --name github -u USER_NAME -p ${{ secrets.GITHUB_TOKEN }} --store-password-in-clear-text
 ```
+> Replace USER_NAME with your GitHub username.  
 
-Then, use the dotnet to add the package on your project:
+Then, use the dotnet to add the package on your project:  
 
 ```bash
  dotnet add package PrimeNumber 
 ```
 
 ## Example
+
 ```csharp
 using System;
 using PrimeNumber;
