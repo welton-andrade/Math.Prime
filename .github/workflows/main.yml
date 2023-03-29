@@ -30,4 +30,4 @@ jobs:
       run: dotnet nuget add source https://nuget.pkg.github.com/welton-andrade/index.json -n github -u welton-andrade -p ${{ secrets.GITHUB_TOKEN }} --store-password-in-clear-text
 
     - name: Push Package on GitHub Packages
-      run: dotnet nuget push "PrimeNumber/bin/Release/*.nupkg" -s "github" --api-key "${{ secrets.PACKAGES_TOKEN }}"
+      run: dotnet nuget push "PrimeNumber/bin/Release/*.nupkg" -s "github" --api-key "${{ secrets.PACKAGES_TOKEN }}" --skip-duplicate
